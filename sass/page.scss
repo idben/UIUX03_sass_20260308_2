@@ -1,2 +1,14 @@
+@use "vars" as v;
 @use "reset";
 @use "base";
+
+header {
+  box-sizing: border-box;
+  padding: 10px;
+  height: 250px;
+  background-color: #{v.$primary};
+  color: #{v.$white};
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
