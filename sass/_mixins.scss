@@ -1,0 +1,69 @@
+@mixin generate-color-classes($colors) {
+  @each $name, $value in $colors {
+    .text-#{$name} {
+      color: $value;
+    }
+
+    .bg-#{$name} {
+      background-color: $value;
+    }
+  }
+}
+
+@mixin generate-fs-classes($start, $end) {
+  @for $i from $start through $end {
+    .fs-#{$i} {
+      font-size: #{$i}px;
+    }
+  }
+}
+
+@mixin generate-fw-classes($weights) {
+  @each $name, $value in $weights {
+    .fw-#{$name} {
+      font-weight: $value;
+    }
+  }
+}
+
+@mixin generate-shadow-classes($shadows) {
+  @each $name, $value in $shadows {
+    .shadow-#{$name} {
+      box-shadow: $value;
+    }
+  }
+}
+
+@mixin generate-spacing-classes($start, $end, $step) {
+  @for $i from $start through $end {
+    @if ($i % $step ==0) {
+      .p-#{$i} {
+        padding: #{$i}px;
+      }
+
+      .px-#{$i} {
+        padding-left: #{$i}px;
+        padding-right: #{$i}px;
+      }
+
+      .py-#{$i} {
+        padding-top: #{$i}px;
+        padding-bottom: #{$i}px;
+      }
+
+      .m-#{$i} {
+        margin: #{$i}px;
+      }
+
+      .mx-#{$i} {
+        margin-left: #{$i}px;
+        margin-right: #{$i}px;
+      }
+
+      .my-#{$i} {
+        margin-top: #{$i}px;
+        margin-bottom: #{$i}px;
+      }
+    }
+  }
+}

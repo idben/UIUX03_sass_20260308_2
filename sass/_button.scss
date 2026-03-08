@@ -1,0 +1,62 @@
+@use "variables" as v;
+
+.btn {
+  display: inline-block;
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: v.$font-size-base;
+  font-weight: v.$font-weight-normal;
+  line-height: 1.6;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--btn-bg, #{v.$light});
+  color: var(--btn-color, #{v.$black});
+  transition: background-color 0.15s ease-in-out;
+
+  &:hover {
+    background-color: var(--btn-bg-hover, #{v.$light});
+  }
+
+  &:active {
+    background-color: var(--btn-bg-active, #{v.$light});
+  }
+}
+
+.btn-primary {
+  --btn-bg: #{v.$primary};
+  --btn-color: #{v.$white};
+  --btn-bg-hover: #{v.$primary-hover};
+  --btn-bg-active: #{v.$primary-active};
+}
+
+.btn-danger {
+  --btn-bg: #{v.$danger};
+  --btn-color: #{v.$white};
+  --btn-bg-hover: #{v.$danger-hover};
+  --btn-bg-active: #{v.$danger-active};
+}
+
+.btn-success {
+  --btn-bg: #{v.$success};
+  --btn-color: #{v.$white};
+  --btn-bg-hover: #{v.$success-hover};
+  --btn-bg-active: #{v.$success-active};
+}
+
+.btn-warning {
+  --btn-bg: #{v.$warning};
+  --btn-color: #{v.$white};
+  --btn-bg-hover: #{v.$warning-hover};
+  --btn-bg-active: #{v.$warning-active};
+}
+
+.btn-submit {
+  --btn-bg: #{v.$submit};
+  --btn-color: #{v.$white};
+  --btn-bg-hover: #{v.$submit-hover};
+  --btn-bg-active: #{v.$submit-active};
+}
