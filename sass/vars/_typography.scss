@@ -1,0 +1,13 @@
+// 字型
+$font-family-base: 'Inter', 'Noto Sans TC', sans-serif;
+$font-size-base: 16px;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// 字重 map
+$weights: (
+  "normal": $font-weight-normal,
+  "medium": $font-weight-medium,
+  "bold": $font-weight-bold,
+);
