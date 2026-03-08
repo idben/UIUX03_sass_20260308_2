@@ -1,0 +1,9 @@
+@use "vars" as v;
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: 20px + 10px *(6 - $i);
+    font-weight: v.$font-weight-bold;
+    margin: 10px;
+  }
+}
